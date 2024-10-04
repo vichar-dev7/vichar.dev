@@ -79,3 +79,49 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Global */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  min-height: 100vh;
+  width:100vw;
+  scroll-behavior: smooth;
+}
+
+body{
+
+  display: grid;
+  place-items: center;
+  
+}
+/* Layout  */
+
+.parentLayout {
+  width: 90%;
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;   
+}
+
+.header {
+  grid-column: 1 / 4;
+}
+
+.left-side {
+  grid-column: 1 / 2;
+}
+
+.main {
+  grid-column: 2 / 4;
+}
+
+.footer {
+  grid-column: 1 / 4;
+}
+
+/* End */
+
