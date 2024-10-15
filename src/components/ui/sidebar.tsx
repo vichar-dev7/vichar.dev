@@ -26,7 +26,7 @@ export default function Sidebar({}: Props) {
         setIsCollapsed(!isCollapsed)
     }
     return (
-        <div className='relative min-w-[80px] border-r px-3 pb-10 pt-24'>
+        <div className='relative min-w-[80px] border-r px-3 pb-10  sticky top-[5.25rem] hidden h-fit flex-none space-y-3 rounded-2xl bg-card px-3 py-5 shadow-sm sm:block lg:px-5'>
             {!mobileWidth &&
                 <div className='absolute right-[-20px] top-7'>
                     <Button variant='secondary' className='rounded-full p-2' onClick={toggleSidebar}>

@@ -242,7 +242,14 @@ export default function CommunityPage() {
                         <Card key={clan.id} className={`${clan.color} ${clan.hover} transition-colors duration-200`}>
                           <CardHeader className="flex flex-row items-center space-y-0">
                             <Image src={clan.logo} alt={`${clan.name} logo`} width={40} height={40} className="rounded-full mr-4" />
-                            <CardTitle className="text-white">{clan.name}</CardTitle>
+                            <CardTitle className="text-white">
+  <div className="flex items-center space-x-1">
+    <span>{"</"}</span>
+    <span className="font-semibold">{clan.name}</span>
+    <span >{">"}</span>
+  </div>
+</CardTitle>
+
                           </CardHeader>
                           <CardContent>
                             <p className="text-sm text-gray-300 mb-4">Join the discussion on {clan.name.toLowerCase()}...</p>
