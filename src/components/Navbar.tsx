@@ -2,6 +2,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import ThemeToggler from "./ThemeToggler";
 import { Input } from "./ui/input";
+import UserButton from "./UserButton";
 
 export const Navbar = () => {
   const { data: session, status } = useSession();
@@ -17,12 +18,12 @@ export const Navbar = () => {
             <Input className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-700" placeholder="Search TechConnect" type="search" />
           </div>
 
+          <UserButton/>
 
-        {/* Theme Toggler */}
-        <div className="flex items-center space-x-6">
+
+        {/* <div className="flex items-center space-x-6">
           <ThemeToggler />
 
-          {/* Auth buttons */}
           <div className="flex items-center space-x-4">
             {status === "authenticated" ? (
               <>
@@ -45,7 +46,8 @@ export const Navbar = () => {
               </button>
             )}
           </div>
-        </div>
+        </div> */}
+
       </nav>
     </header>
   );
