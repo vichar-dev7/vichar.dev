@@ -3,9 +3,14 @@ import "./globals.css";
 import { Metadata } from "next";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
-import { Sidebar } from "@/components/Sidebar"; // Import Sidebar component
+import Sidebar from "@/components/Sidebar"; // Import Sidebar component
 import { RightSide } from "@/components/RightSide"; // Import RightSide component
+import { JetBrains_Mono } from "next/font/google";
 
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -29,11 +34,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${jetBrainsMono.className} antialiased`}
+      >
         <Providers>
-
           <div className="flex min-h-screen">
-            <main className=" flex-grow">{children}</main> 
+            <main className="flex-grow">{children}</main>
           </div>
         </Providers>
       </body>
