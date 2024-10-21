@@ -4,6 +4,9 @@ const nextConfig = {
         staleTimes: {
           dynamic: 30,
         },
+      },
+      images:{
+        domains:["avatars.githubusercontent.com"]
       }
 };
 
